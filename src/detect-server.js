@@ -20,7 +20,7 @@ const detectors = fs
     }
   })
   .filter(Boolean);
-
+console.log(detecotrs);
 module.exports.serverSettings = async devConfig => {
   let settingsArr = [];
   let settings = null;
