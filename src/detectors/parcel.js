@@ -20,7 +20,7 @@ module.exports = function() {
 
   if (possibleArgsArrs.length === 0) {
     // ofer to run it when the user doesnt have any scripts setup! 🤯
-    possibleArgsArrs.push(["parcel", "start"]);
+    possibleArgsArrs.push(["parcel", "src/index.html"]);
   }
   return {
     type: "parcel",
