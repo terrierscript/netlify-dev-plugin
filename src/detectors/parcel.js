@@ -10,18 +10,18 @@ module.exports = function() {
   // REQUIRED DEPS
   if (!hasRequiredDeps(["parcel"]) && !hasRequiredDeps(["parcel-bundler"]))
     return false;
-
+  console.log("parcel");
   /** everything below now assumes that we are within react-static */
 
-  // const possibleArgsArrs = scanScripts({
-  //   preferredScriptsArr: ["start", "develop", "dev"]
-  //   // preferredCommand: "parcel"
-  // });
+  const possibleArgsArrs = scanScripts({
+    preferredScriptsArr: ["start", "develop", "dev"]
+    // preferredCommand: "parcel"
+  });
 
-  // if (possibleArgsArrs.length === 0) {
-  //   // ofer to run it when the user doesnt have any scripts setup! 🤯
-  //   possibleArgsArrs.push(["parcel", "start"]);
-  // }
+  if (possibleArgsArrs.length === 0) {
+    // ofer to run it when the user doesnt have any scripts setup! 🤯
+    possibleArgsArrs.push(["parcel", "start"]);
+  }
   return {
     type: "parcel",
     command: getYarnOrNPMCommand(),
